@@ -8,4 +8,8 @@ public enum OutputFormats {
     public static boolean contains(String format) {
         return true;
     }
+
+    public static OutputFormats getOutputFormat(String format) {
+        return OutputFormats.valueOf(format.toUpperCase());
+    }
 }
