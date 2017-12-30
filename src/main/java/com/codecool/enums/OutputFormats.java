@@ -5,8 +5,14 @@ public enum OutputFormats {
     XML,
     JSON;
 
-    public static boolean contains(String format) {
-        return true;
+    public static boolean contains(String givenFormat) {
+
+        for (OutputFormats outputFormat : OutputFormats.values()) {
+            if (outputFormat.name().equals(givenFormat.toUpperCase()))
+                return true;
+        }
+
+        return false;
     }
 
     public static OutputFormats getOutputFormat(String format) {
