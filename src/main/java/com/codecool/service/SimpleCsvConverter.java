@@ -1,4 +1,4 @@
-package com.codecool;
+package com.codecool.service;
 
 import com.codecool.enums.OutputFormats;
 import com.codecool.view.OutputFormatter;
@@ -20,7 +20,9 @@ public class SimpleCsvConverter {
     public void convert(File file, OutputFormats outputFormat) {
         System.out.println("I convert CSV to output format:" + outputFormat);
         List<String> data = this.fileReader.read(file);
+        System.out.println(data);
         OutputFormatter outputFormatter = this.outputFormatterFactory.createByFormat(outputFormat);
+        outputFormatter.printToConsole(data);
     }
 
     public void convert(File file) {

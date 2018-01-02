@@ -1,7 +1,8 @@
 package com.codecool;
 
 import com.codecool.enums.OutputFormats;
-import com.codecool.view.OutputFormatter;
+import com.codecool.service.FileReader;
+import com.codecool.service.SimpleCsvConverter;
 import com.codecool.view.OutputFormatterFactory;
 
 import java.io.File;
