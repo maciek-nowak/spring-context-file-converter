@@ -18,9 +18,7 @@ public class SimpleCsvConverter {
     }
 
     public void convert(File file, OutputFormats outputFormat) {
-        System.out.println("I convert CSV to output format:" + outputFormat);
         List<String> data = this.fileReader.read(file);
-        System.out.println(data);
         OutputFormatter outputFormatter = this.outputFormatterFactory.createByFormat(outputFormat);
         outputFormatter.printToConsole(data);
     }

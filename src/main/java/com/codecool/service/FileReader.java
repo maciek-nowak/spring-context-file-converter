@@ -21,7 +21,6 @@ public class FileReader {
             e.printStackTrace();
         }
 
-        System.out.println("File has been read");
         return fileContent;
     }
 }
