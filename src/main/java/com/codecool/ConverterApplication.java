@@ -19,11 +19,9 @@ public class ConverterApplication {
             System.out.println("No input file defined");
 
         } else if (argumentsCount == 1 && new File(args[0]).isFile()){
-            System.out.println("File has been found!");
             simpleCsvConverter.convert(new File(args[0]));
 
         } else if (argumentsCount > 1 && new File(args[1]).isFile() && OutputFormats.contains(args[0])) {
-            System.out.println("Proper format and file have been found!");
             simpleCsvConverter.convert(new File(args[1]), OutputFormats.getOutputFormat(args[0]));
 
         } else {
