@@ -11,33 +11,6 @@ public class XmlOutputFormatter implements OutputFormatter{
 
     }
 
-    /*private String buildXml(List<String[]> splittedRows) {
-        String xmlRepresentation = "<rows>\n";
-        String[] columnNames = splittedRows.get(0);
-        splittedRows.remove(0);
-
-        for (String[] row : splittedRows) {
-            String xmlRow = buildxmlRow(columnNames, row);
-            xmlRepresentation += xmlRow;
-        }
-
-        xmlRepresentation += "</rows>";
-        return xmlRepresentation;
-    }
-
-    private String buildxmlRow(String[] columnNames, String[] row) {
-        String xmlRow = "    <row>\n";
-
-        for (int i = 0; i < columnNames.length; i++) {
-            String key = columnNames[i];
-            String value = row[i];
-            xmlRow += String.format("        <%s>%s</%s>\n", key, value, key);
-        }
-
-        xmlRow += "    </row>\n";
-        return xmlRow;
-    }*/
-
     private String buildXml(List<String[]> splittedRows) {
         StringBuilder xmlRepresentation = new StringBuilder("<rows>\n");
         String[] columnNames = splittedRows.get(0);
