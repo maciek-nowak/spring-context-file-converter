@@ -5,4 +5,8 @@
 
     <bean id="fileReader" class="com.codecool.service.FileReader"/>
     <bean id="outputFormatterFactory" class="com.codecool.view.OutputFormatterFactory"/>
+    <bean id="simpleCsvConverter" class="com.codecool.service.SimpleCsvConverter">
+        <constructor-arg ref="fileReader"/>
+        <constructor-arg ref="outputFormatterFactory"/>
+    </bean>
 </beans>

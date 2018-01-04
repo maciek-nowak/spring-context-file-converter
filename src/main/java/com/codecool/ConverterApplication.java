@@ -1,9 +1,8 @@
 package com.codecool;
 
 import com.codecool.enums.OutputFormats;
-import com.codecool.service.FileReader;
 import com.codecool.service.SimpleCsvConverter;
-import com.codecool.view.OutputFormatterFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.File;
 
@@ -11,9 +10,9 @@ public class ConverterApplication {
 
     public static void main(String[] args) {
         Integer argumentsCount = args.length;
-        FileReader fileReader = new FileReader();
-        OutputFormatterFactory outputFormatterFactory = new OutputFormatterFactory();
-        SimpleCsvConverter simpleCsvConverter = new SimpleCsvConverter(fileReader, outputFormatterFactory);
+
+        ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        SimpleCsvConverter simpleCsvConverter = (SimpleCsvConverter) appContext.getBean("simpleCsvConverter");
 
         if (argumentsCount == 0) {
             System.out.println("No input file defined");
