@@ -16,7 +16,7 @@ public class ConverterApplication {
 
         if (argumentsCount == 0) {
             System.out.println("No input file defined");
-            System.out.println("Proper command format: java ConvertApplication xml test.csv");
+            System.out.println("Proper command format: ./run xml test.csv");
 
         } else if (argumentsCount == 1 && new File(args[0]).isFile()){
             simpleCsvConverter.convert(new File(args[0]));
@@ -26,7 +26,7 @@ public class ConverterApplication {
 
         } else {
             System.out.println("No proper arguments found! Try again!");
-            System.out.println("Proper command format: java ConvertApplication xml test.csv");
+            System.out.println("Proper command format: ./run xml test.csv");
         }
     }
 }
