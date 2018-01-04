@@ -1,0 +1,1 @@
+java -jar target/scc-final-jar-with-dependencies.jar "$@"
