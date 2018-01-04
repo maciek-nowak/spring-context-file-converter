@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="fileReader" class="com.codecool.service.FileReader"/>
-    <bean id="outputFormatterFactory" class="com.codecool.view.OutputFormatterFactory"/>
-    <bean id="simpleCsvConverter" class="com.codecool.service.SimpleCsvConverter">
-        <constructor-arg ref="fileReader"/>
-        <constructor-arg ref="outputFormatterFactory"/>
-    </bean>
+    <context:annotation-config/>
+    <context:component-scan base-package="com.codecool"/>
+
+    <!--<bean id="fileReader" class="com.codecool.service.FileReader"/>-->
+    <!--<bean id="outputFormatterFactory" class="com.codecool.view.OutputFormatterFactory"/>-->
+    <!--<bean id="simpleCsvConverter" class="com.codecool.service.SimpleCsvConverter">-->
+        <!--<constructor-arg ref="fileReader"/>-->
+        <!--<constructor-arg ref="outputFormatterFactory"/>-->
+    <!--</bean>-->
 </beans>
