@@ -1,7 +1,9 @@
 package com.codecool.view;
 
 import com.codecool.enums.OutputFormats;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OutputFormatterFactory {
     public OutputFormatter createByFormat(OutputFormats outputFormat){
         OutputFormatter outputFormatter = null;

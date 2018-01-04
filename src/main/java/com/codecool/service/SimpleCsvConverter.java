@@ -3,10 +3,12 @@ package com.codecool.service;
 import com.codecool.enums.OutputFormats;
 import com.codecool.view.OutputFormatter;
 import com.codecool.view.OutputFormatterFactory;
+import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.util.List;
 
+@Component
 public class SimpleCsvConverter {
 
     private FileReader fileReader;
