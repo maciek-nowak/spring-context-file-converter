@@ -12,7 +12,7 @@ public interface OutputFormatter {
         List<String[]> splittedRows = new ArrayList<>();
 
         for (String row : data) {
-            String[] splittedRow = row.split(",");
+            String[] splittedRow = row.split(",", -1);
             splittedRows.add(splittedRow);
         }
 
